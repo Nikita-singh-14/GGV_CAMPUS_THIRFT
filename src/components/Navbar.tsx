@@ -19,7 +19,7 @@ const Navbar = () => {
             </div>
 
             {/* Nav Links */}
-            <ul className="hidden md:flex items-center gap-8 text-gray-700 font-medium">
+            <ul className="hidden md:flex items-center gap-16 text-gray-700 font-medium">
 
         <Link to="/how-it-works">
           <li className="hover:text-blue-600 cursor-pointer">
