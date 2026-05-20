@@ -1,4 +1,4 @@
-import React from 'react'
+
 type storeCartProps = {
     id: number,
     name: string,
@@ -9,7 +9,7 @@ type storeCartProps = {
     image: string,
     desc: string,
 }
-const StoreCard = ({id, name, category, condition, buyPrice, status, image, desc} : storeCartProps) => {
+const StoreCard = ({name, category, condition, buyPrice, image} : storeCartProps) => {
   return (
     <div className="w-64 p-4 bg-white shadow-lg rounded-xl">
       <img
