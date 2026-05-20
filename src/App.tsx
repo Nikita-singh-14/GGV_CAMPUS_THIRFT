@@ -4,7 +4,7 @@ import CartPage from './pages/CartPage';
 import StorePage from './pages/StorePage';
 import SellPage from './pages/SellPage';
 import ItemDetailPage from './pages/ItemDetailPage';
-import LandingPage from './pages/landingPage';
+import LandingPage from './pages/LandingPage';
 
 const App = () => {
   return (
