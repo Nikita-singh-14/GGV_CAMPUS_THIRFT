@@ -1,3 +1,6 @@
+import { useNavigate } from "react-router-dom";
+import { useCart } from "../context/CartContext";
+
 
 type storeCartProps = {
     id: number,
@@ -9,13 +12,17 @@ type storeCartProps = {
     image: string,
     desc: string,
 }
-const StoreCard = ({name, category, condition, buyPrice, image} : storeCartProps) => {
+const StoreCard = ({id, name, category, condition, buyPrice, image} : storeCartProps) => {
+  const { addToCart } = useCart();
+  const navigate = useNavigate();
   return (
     <div className="w-64 p-4 bg-white shadow-lg rounded-xl">
       <img
         src={image}
         alt={name}
-        className="w-full h-40 object-cover rounded-lg"
+        className="w-full h-40 object-cover rounded-lg cursor-pointer"
+        onClick={() => navigate(`/item-detail/${id}`)}
+        
       />
 
       <h2 className="mt-3 text-xl font-semibold">{name}</h2>
@@ -25,7 +32,9 @@ const StoreCard = ({name, category, condition, buyPrice, image} : storeCartProps
         <p className="text-gray-600">₹ {buyPrice}</p>
         <div className='text-green-800'>{condition}</div>
       </div>
-      <button className="mt-3 px-4 py-2 bg-black text-white rounded-lg cursor-pointer">
+      <button className="mt-3 px-4 py-2 bg-black text-white rounded-lg cursor-pointer"
+      onClick={addToCart}
+      >
         Add to Cart
       </button>
     </div>

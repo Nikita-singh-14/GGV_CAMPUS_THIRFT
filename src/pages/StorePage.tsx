@@ -73,7 +73,7 @@ const StorePage = () => {
 
         <div className="flex flex-wrap gap-6 p-6 justify-center">
           {filteredItems.map((item) => (
-            <StoreCard
+              <StoreCard
               key={item.id}
               id={item.id}
               name={item.name}
@@ -83,7 +83,9 @@ const StorePage = () => {
               status={item.status}
               desc={item.desc}
               image={item.image}
+              
             />
+            
           ))}
         </div>
         {filteredItems.length === 0 && (

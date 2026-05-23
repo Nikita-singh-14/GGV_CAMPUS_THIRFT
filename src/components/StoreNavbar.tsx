@@ -2,9 +2,10 @@
 import { Link } from 'react-router-dom'
 import { FaUserCircle } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
+import { useCart } from '../context/CartContext';
 
 const StoreNavbar = () => {
-    const cartCount = 3;
+    const {cartCount} = useCart();
 
     return (
         <nav className="sticky top-0 z-50 w-full flex items-center justify-between px-8 py-4 bg-white shadow-md">
@@ -95,6 +96,7 @@ const StoreNavbar = () => {
                     <FaUserCircle className='text-2xl'/>
 
                 </Link>
+                
 
             </div>
         </nav>

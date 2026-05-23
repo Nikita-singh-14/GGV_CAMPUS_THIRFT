@@ -1,5 +1,3 @@
-
-
 const SellPage = () => {
   return (
     <div>SellPage</div>
