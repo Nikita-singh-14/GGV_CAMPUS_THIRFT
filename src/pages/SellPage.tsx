@@ -1,6 +1,10 @@
+import SellNavbar from "../components/SellNavbar"
+
 const SellPage = () => {
   return (
-    <div>SellPage</div>
+    <>
+    <SellNavbar/>
+    </>
   )
 }
 
