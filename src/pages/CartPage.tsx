@@ -5,33 +5,30 @@ import { useState } from "react";
 import { items } from "../data/items";
 import { useNavigate, useParams } from "react-router-dom";
 import { useCart } from "../context/CartContext";
-import { CiDeliveryTruck } from "react-icons/ci";
-import { AiOutlineLoading3Quarters } from "react-icons/ai";
-import { VscWorkspaceTrusted } from "react-icons/vsc";
 
-const categories = [
-  "All",
-  "Textbooks",
-  "Electronics",
-  "Dorm items",
-  "Bikes",
-  "Clothes",
-  "Sports",
-];
+// const categories = [
+//   "All",
+//   "Textbooks",
+//   "Electronics",
+//   "Dorm items",
+//   "Bikes",
+//   "Clothes",
+//   "Sports",
+// ];
 
 const CartPage = () => {
-  const [activeCategory, setActiveCategory] = useState("All");
+  // const [activeCategory, setActiveCategory] = useState("All");
   const { id } = useParams();
 
   const item = items.find((i) => i.id === Number(id));
-  const { addToCart } = useCart();
+  // const { addToCart } = useCart();
   const navigate = useNavigate();
   const {cartCount} = useCart();
 
-  const filteredItems =
-    activeCategory === "All"
-      ? items
-      : items.filter((i) => i.category === activeCategory);
+  // const filteredItems =
+  //   activeCategory === "All"
+  //     ? items
+  //     : items.filter((i) => i.category === activeCategory);
 
   return (
     <>

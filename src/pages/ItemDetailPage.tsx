@@ -1,6 +1,6 @@
 // import { useState } from "react";
 import StoreNavbar from "../components/StoreNavbar";
-import StoreCard from "../components/StoreCard";
+
 import { FaChevronRight } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa6";
 import { useState } from "react";
@@ -29,10 +29,10 @@ const ItemDetailPage = () => {
   const { addToCart } = useCart();
   const navigate = useNavigate();
 
-  const filteredItems =
-    activeCategory === "All"
-      ? items
-      : items.filter((i) => i.category === activeCategory);
+  // const filteredItems =
+  //   activeCategory === "All"
+  //     ? items
+  //     : items.filter((i) => i.category === activeCategory);
 
   return (
     <>
