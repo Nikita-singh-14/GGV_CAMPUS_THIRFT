@@ -1,7 +1,6 @@
 // import { useState } from "react";
 import StoreNavbar from "../components/StoreNavbar";
 import { FaArrowLeft } from "react-icons/fa6";
-import { useState } from "react";
 import { items } from "../data/items";
 import { useNavigate, useParams } from "react-router-dom";
 import { useCart } from "../context/CartContext";
