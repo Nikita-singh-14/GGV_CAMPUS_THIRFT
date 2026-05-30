@@ -93,6 +93,15 @@ const SellForm = () => {
         className="border p-3 rounded-lg bg-white"
       />
     </div>
+    <div className="flex flex-col gap-2">
+      <label>Your UPI Info *</label>
+
+      <input
+        type="text"
+        placeholder="e.g. yourUPI@upi"
+        className="border p-3 rounded-lg bg-white"
+      />
+    </div>
 
     {/* Submit Button */}
     <Button onClick={() => navigate("/sell-form-2")} text="Next: Your Info" />

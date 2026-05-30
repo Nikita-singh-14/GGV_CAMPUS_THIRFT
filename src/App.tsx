@@ -6,6 +6,7 @@ import SellPage from './pages/SellPage';
 import ItemDetailPage from './pages/ItemDetailPage';
 import LandingPage from './pages/LandingPage';
 import SellForm2 from './components/SellForm2';
+import AdminPage from './pages/AdminPage';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <Route path='/sell' element={<SellPage/>}/>
       <Route path='/item-detail/:id' element={<ItemDetailPage/>}/>
       <Route path='/sell-form-2' element={<SellForm2/>}/>
+      <Route path='/admin' element={<AdminPage/>}/>
     </Routes>
     </BrowserRouter>
   )
