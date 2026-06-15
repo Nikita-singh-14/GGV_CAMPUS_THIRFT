@@ -26,10 +26,10 @@ const LandingPage = () => {
     ]
 
     const products = [
-        { icon: '📚', title: 'Calculus Vol. 2', category: 'Textbooks', price: '480', condition: 'Good' },
-        { icon: '💻', title: 'Dell Inspiron 15', category: 'Electronics', price: '19,500', condition: 'Good' },
-        { icon: '🎧', title: 'Sony Headphones', category: 'Electronics', price: '2,000', condition: 'Good' },
-        { icon: '📱', title: 'iPhone XR', category: 'Electronics', price: '9,500', condition: 'Fair' },
+        { icon: '📚', title: 'Calculus Vol. 2', category: 'Textbooks', price: 480, condition: 'Good' as const},
+        { icon: '💻', title: 'Dell Inspiron 15', category: 'Electronics', price: 19500, condition: 'Good' as const},
+        { icon: '🎧', title: 'Sony Headphones', category: 'Electronics', price: 2000, condition: 'Good' as const},
+        { icon: '📱', title: 'iPhone XR', category: 'Electronics', price: 9500, condition: 'Fair' as const},
     ]
 
     const trustPoints = [
@@ -306,5 +306,3 @@ const LandingPage = () => {
 }
 
 export default LandingPage
-
-

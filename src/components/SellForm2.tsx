@@ -1,9 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import Button from "./Button";
 
 const SellForm2 = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="flex flex-col justify-center items-center py-10 px-4">
-      
       <h1 className="text-3xl font-bold">Sell your item</h1>
 
       <p className="text-gray-600 mt-2 text-center">
@@ -12,9 +14,11 @@ const SellForm2 = () => {
 
       {/* Steps */}
       <div className="flex items-center gap-10 mt-6">
-        
         <div className="flex items-center gap-3">
-          <button className="bg-blue-500 text-white w-8 h-8 rounded-full">
+          <button
+            type="button"
+            className="bg-blue-500 text-white w-8 h-8 rounded-full"
+          >
             1
           </button>
 
@@ -26,7 +30,10 @@ const SellForm2 = () => {
         <div className="flex items-center gap-3">
           <div className="w-12 border-t border-gray-400"></div>
 
-          <button className="bg-blue-500 text-white w-8 h-8 rounded-full">
+          <button
+            type="button"
+            className="bg-blue-500 text-white w-8 h-8 rounded-full"
+          >
             2
           </button>
 
@@ -36,13 +43,9 @@ const SellForm2 = () => {
         </div>
       </div>
 
-      {/* Form */}
       <form className="bg-gray-200 flex flex-col p-6 rounded-2xl gap-5 mt-8 w-full max-w-xl shadow-md">
-
-        {/* Full Name */}
         <div className="flex flex-col gap-2">
           <label>Your Full Name *</label>
-
           <input
             type="text"
             placeholder="Enter your full name"
@@ -50,10 +53,8 @@ const SellForm2 = () => {
           />
         </div>
 
-        {/* Phone */}
         <div className="flex flex-col gap-2">
           <label>Phone Number *</label>
-
           <input
             type="tel"
             placeholder="Enter your phone number"
@@ -61,10 +62,8 @@ const SellForm2 = () => {
           />
         </div>
 
-        {/* UPI */}
         <div className="flex flex-col gap-2">
           <label>UPI ID for payout *</label>
-
           <input
             type="text"
             placeholder="example@upi"
@@ -72,10 +71,8 @@ const SellForm2 = () => {
           />
         </div>
 
-        {/* Pickup Location */}
         <div className="flex flex-col gap-2">
           <label>Hostel / Pickup Location *</label>
-
           <input
             type="text"
             placeholder="Enter pickup location"
@@ -83,13 +80,17 @@ const SellForm2 = () => {
           />
         </div>
 
-        {/* Buttons */}
         <div className="flex justify-between gap-4 mt-4">
-          <Button text="Back" />
+          <Button
+            text="Back"
+            onClick={() => navigate("/sell-form")}
+          />
 
-          <Button text="Submit for review" />
+          <Button
+            text="Submit for review"
+            onClick={() => console.log("Submitted")}
+          />
         </div>
-
       </form>
     </div>
   );
