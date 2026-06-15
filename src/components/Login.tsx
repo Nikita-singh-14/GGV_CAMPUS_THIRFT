@@ -1,23 +1,27 @@
 import { useState } from "react";
+import type { ChangeEvent, FormEvent } from "react";
 
 const Login = () => {
-    const [loginInput, setLoginInput] = useState({
-        email: "",
-        password: ""
+  const [loginInput, setLoginInput] = useState({
+    email: "",
+    password: ""
+  });
+
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setLoginInput({
+      ...loginInput,
+      [e.target.name]: e.target.value
     });
+  };
 
-    const handleInputSubmit = (e) => {
-        setLoginInput({
-            ...loginInput,
-            [e.target.name]: e.target.value
-        });
-
-    }
-    
+  const handleFormSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    // TODO: Add login submission logic
+  };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-blue-100 via-white to-indigo-200 px-4">
-      <form className="w-full max-w-md bg-white/80 backdrop-blur-lg border border-white/30 rounded-2xl shadow-2xl p-8">
+      <form onSubmit={handleFormSubmit} className="w-full max-w-md bg-white/80 backdrop-blur-lg border border-white/30 rounded-2xl shadow-2xl p-8">
         
         <div className="text-center mb-8">
           <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-600 flex items-center justify-center text-white text-2xl font-bold">
@@ -43,7 +47,7 @@ const Login = () => {
             placeholder="Enter your email"
             name="email"
             value={loginInput.email}
-            onChange={handleInputSubmit}
+            onChange={handleInputChange}
             className="w-full px-4 py-3 rounded-xl border border-gray-300 outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
           />
         </div>
@@ -58,7 +62,7 @@ const Login = () => {
             placeholder="Enter your password"
             name="password"
             value={loginInput.password}
-            onChange={handleInputSubmit}
+            onChange={handleInputChange}
             className="w-full px-4 py-3 rounded-xl border border-gray-300 outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
           />
         </div>
@@ -79,7 +83,6 @@ const Login = () => {
 
         <button
           type="submit"
-          onClick={handleInputSubmit}
           className="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-blue-300"
         >
           Log In
