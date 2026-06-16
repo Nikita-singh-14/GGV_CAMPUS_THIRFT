@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { ChangeEvent, FormEvent } from "react";
+import { Link } from "react-router";
 
 const Signup = () => {
   const [signupInput, setSignupInput] = useState({
@@ -120,12 +121,12 @@ const Signup = () => {
 
         <p className="text-center text-gray-600 mt-6">
           Already have an account?{" "}
-          <a
-            href="/login"
+          <Link
+            to="/login"
             className="text-blue-600 font-semibold hover:underline"
           >
             Sign In
-          </a>
+          </Link>
         </p>
       </form>
       

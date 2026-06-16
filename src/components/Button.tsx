@@ -1,15 +1,15 @@
-
-
 interface ButtonProps {
     text: string;
     variant?: 'primary' | 'outline' | 'indigo';
     onClick?: () => void;
+    type?: 'button' | 'submit';
 }
 
 const Button: React.FC<ButtonProps> = ({
     text,
     variant = 'primary',
     onClick,
+    type = 'button',
 }) => {
     const styles = {
         base: {
@@ -46,6 +46,7 @@ const Button: React.FC<ButtonProps> = ({
 
     return (
         <button
+            type={type}
             onClick={onClick}
             style={{
                 ...styles.base,
