@@ -9,6 +9,7 @@ import SellForm2 from './components/SellForm2';
 import AdminPage from './pages/AdminPage';
 import Login from './components/Login';
 import Signup from './components/Signup';
+import SellForm from './components/SellForm';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
       <Route path='/sell' element={<SellPage/>}/>
       <Route path='/item-detail/:id' element={<ItemDetailPage/>}/>
       <Route path='/sell-form-2' element={<SellForm2/>}/>
+      <Route path='/sell-form' element={<SellForm/>}/>
       <Route path='/admin' element={<AdminPage/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/signup' element={<Signup/>}/>

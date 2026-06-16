@@ -1,6 +1,5 @@
-
-
 import { useState } from 'react'
+import {Link} from "react-router-dom";
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false)
@@ -30,7 +29,7 @@ const Navbar = () => {
                 justifyContent: 'space-between',
             }}>
                 {/* Logo */}
-                <a href="/" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
+                <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
                     <div style={{
                         width: '42px',
                         height: '42px',
@@ -50,14 +49,14 @@ const Navbar = () => {
                     <span style={{ fontWeight: '800', fontSize: '17px', color: '#1e1b4b', letterSpacing: '-0.01em' }}>
                         GGV_CAMPUS_THRIFT
                     </span>
-                </a>
+                </Link>
 
                 {/* Desktop links */}
                 <div style={{ display: 'flex', alignItems: 'center', gap: '32px' }} className="nav-desktop">
                     {navLinks.map((link) => (
-                        <a
+                        <Link
                             key={link.label}
-                            href={link.href}
+                            to={link.href}
                             style={{
                                 fontSize: '14px',
                                 fontWeight: '600',
@@ -69,14 +68,14 @@ const Navbar = () => {
                             onMouseLeave={(e) => e.currentTarget.style.color = '#374151'}
                         >
                             {link.label}
-                        </a>
+                        </Link>
                     ))}
                 </div>
 
                 {/* CTA */}
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                    <a
-                        href="/login"
+                    <Link
+                        to="/login"
                         style={{
                             fontSize: '14px',
                             fontWeight: '600',
@@ -90,9 +89,9 @@ const Navbar = () => {
                         onMouseLeave={(e) => e.currentTarget.style.background = 'transparent'}
                     >
                         Sign in
-                    </a>
-                    <a
-                        href="/signup"
+                    </Link>
+                    <Link
+                        to="/signup"
                         style={{
                             fontSize: '14px',
                             fontWeight: '600',
@@ -107,7 +106,7 @@ const Navbar = () => {
                         onMouseLeave={(e) => e.currentTarget.style.background = '#3730a3'}
                     >
                         Get started
-                    </a>
+                    </Link>
 
                     {/* Hamburger */}
                     <button
